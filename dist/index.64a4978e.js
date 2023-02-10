@@ -594,32 +594,25 @@ loader.load("./assets/moskwitch.glb", function (glb) {
 });
 */ var carModel;
 const changeCar = (str)=>{
-    var suv;
     const loader = new (0, _gltfloader.GLTFLoader)();
     loader.load(`./assets/${str}.glb`, function(glb) {
         const model = glb.scene;
+        scene.remove(carModel);
         carModel = model;
         //model.scale.set(0.5, 0.5, 0.5);
         glb.scene.position.x = 0; //Position (x = right+ left-)
         glb.scene.position.y = 0; //Position (y = up+, down-)
         glb.scene.position.z = 0;
-        model.name = "suv";
         scene.add(carModel);
-        suv = model;
-        model.matrixAutoUpdate = false;
         vehicle.scale = new _yuka.Vector3(0.6, 0.6, 0.6);
+        model.matrixAutoUpdate = false;
         vehicle.setRenderComponent(model, sync);
     });
 };
 function onKeyDown(e) {
     var key = e.which;
-    if (key == 88) {
-        scene.remove(carModel);
-        changeCar("SUV");
-    } else {
-        scene.remove(carModel);
-        changeCar("moskwitch");
-    }
+    if (key === 88) changeCar("SUV");
+    else if (key === 87) changeCar("moskwitch");
 }
 document.addEventListener("keydown", onKeyDown, false);
 changeCar("SUV");
