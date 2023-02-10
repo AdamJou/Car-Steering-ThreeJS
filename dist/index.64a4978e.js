@@ -622,6 +622,7 @@ function onKeyDown(e) {
     }
 }
 document.addEventListener("keydown", onKeyDown, false);
+changeCar("SUV");
 // const vehicleGeometry = new THREE.ConeBufferGeometry(0.1, 0.5, 8);
 // vehicleGeometry.rotateX(Math.PI * 0.5);
 // const vehicleMaterial = new THREE.MeshNormalMaterial();

@@ -3,6 +3,8 @@ import * as YUKA from "yuka";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
+
+import { Think } from "yuka";
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -114,6 +116,7 @@ function onKeyDown(e) {
 
 document.addEventListener("keydown", onKeyDown, false);
 
+changeCar("SUV");
 // const vehicleGeometry = new THREE.ConeBufferGeometry(0.1, 0.5, 8);
 // vehicleGeometry.rotateX(Math.PI * 0.5);
 // const vehicleMaterial = new THREE.MeshNormalMaterial();
