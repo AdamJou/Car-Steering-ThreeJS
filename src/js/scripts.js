@@ -188,8 +188,6 @@ const mesh1 = new THREE.Mesh(geometry1, material1);
 
 scene.add(mesh1);
 
-////////////////
-
 const closedSpline1 = new THREE.CatmullRomCurve3([
   new THREE.Vector3(-6, 0, 4),
   new THREE.Vector3(-12, 0, 0),
