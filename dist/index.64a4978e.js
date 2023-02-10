@@ -675,7 +675,6 @@ const material1 = new _three.MeshLambertMaterial({
 });
 const mesh1 = new _three.Mesh(geometry1, material1);
 scene.add(mesh1);
-////////////////
 const closedSpline1 = new _three.CatmullRomCurve3([
     new _three.Vector3(-6, 0, 4),
     new _three.Vector3(-12, 0, 0),
